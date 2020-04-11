@@ -1,0 +1,32 @@
+$primaryColor: #0D0D0D;
+$flushColor: #F20587;
+$seriousColor: #26011C;
+$balanceColor: #BF9663;
+$clearColor: #F2F0F0;
+
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 2;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+
+    &.form-results {
+        background-color: $seriousColor;
+        color: $clearColor;
+        font-size: 1.5em;
+        text-align: center;
+        
+    }
+}
+

@@ -1,0 +1,13 @@
+$primaryColor: #0D0D0D;
+$flushColor: #F20587;
+$seriousColor: #26011C;
+$balanceColor: #BF9663;
+$clearColor: #F2F0F0;
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px 40px;
+    background-color: $primaryColor;
+    color: $clearColor;
+}
