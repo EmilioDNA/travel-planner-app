@@ -1,36 +1,124 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8">
-        <title>Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My travel planner app</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/925899a1a8.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
-        <main>
-            <section>
-                <form class="">
-                    <input id="name" type="text" name="input" value="" placeholder="http://">
-                    <input class="button" type="submit" name="" value="Analyze URL" onclick="Client.handleSubmit(event)">
-                </form>
-            <section>
-
-            <section class="form-results">
-                <strong><h1>Form Results:</h1></strong>
-                <div id="results"></div>
+        <div id="main-container">
+            <header class="box header-container">
+                <nav class="inner-box flex-nav">
+                    <div>
+                        <h2>Blog</h2>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="#">Explore</a></li>
+                        <li><a href="#">Most Popular</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <ul class="nav-list">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                    </nav>
+            </header>
+            <section class="box outer-box">
+                <main>
+                    <section>
+                        <form class="">
+                            <input id="name" type="text" name="input" value="" placeholder="example: Paris">
+                            <input class="button" type="submit" name="" value="Search city" onclick="Client.handleSubmit(event)">
+                        </form>
+                    <section>
+        
+                    <section class="form-results">
+                        <strong><h1>Form Results:</h1></strong>
+                        <div id="results"></div>
+                    </section>
+                </main>
+                <div id="travel-planner-list" class="inner-box blog-post-list">
+                    <div class="card">
+                        <figure>
+                            <img src="/src/client/media/blog-content.jpg" alt="Article about UX and Coronavirus">
+                            <!-- <figcaption class="article-info"><em>Article No. 345 | April 01, 2020</em></figcaption> -->
+                        </figure>
+                        <div class="card-body">
+                            <h2>Paris, France is 220 days away</h2>
+                            <span>
+                                <button class="card-button">Save trip</button>
+                                <button class="card-button">Remove trip</button>
+                            </span>
+                            <p>Typical weather for then is:</p>
+                            <span>High - 46 | Low - 35</span> 
+                            <p>Mostly cloudy throughout the day.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="/src/client/media/blog-content.jpg" alt="Article about UX and Coronavirus">
+                            <figcaption class="article-info"><em>Article No. 345 | April 01, 2020</em></figcaption>
+                        </figure>
+                        <div class="card-body">
+                            <h2>Paris, France is 220 days away</h2>
+                            <span>
+                                <button class="card-button">Save trip</button>
+                                <button class="card-button">Remove trip</button>
+                            </span>
+                            <p>Typical weather for then is:</p>
+                            <span>High - 46 | Low - 35</span> 
+                            <p>Mostly cloudy throughout the day.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="/src/client/media/blog-content.jpg" alt="Article about UX and Coronavirus">
+                            <figcaption class="article-info"><em>Article No. 345 | April 01, 2020</em></figcaption>
+                        </figure>
+                        <div class="card-body">
+                            <h2>Paris, France is 220 days away</h2>
+                            <span>
+                                <button class="card-button">Save trip</button>
+                                <button class="card-button">Remove trip</button>
+                            </span>
+                            <p>Typical weather for then is:</p>
+                            <span>High - 46 | Low - 35</span> 
+                            <p>Mostly cloudy throughout the day.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="/src/client/media/blog-content.jpg" alt="Article about UX and Coronavirus">
+                            <figcaption class="article-info"><em>Article No. 345 | April 01, 2020</em></figcaption>
+                        </figure>
+                        <div class="card-body">
+                            <h2>Paris, France is 220 days away</h2>
+                            <span>
+                                <button class="card-button">Save trip</button>
+                                <button class="card-button">Remove trip</button>
+                            </span>
+                            <p>Typical weather for then is:</p>
+                            <span>High - 46 | Low - 35</span> 
+                            <p>Mostly cloudy throughout the day.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
-        </main>
+            <footer class="box footer">
+                <div><p><em>Copyright</em>  <strong>Emilio Nájera</strong> 2020</p></div>
+            </footer>
+        </div>
+        <!-- 
+        
 
-        <footer>
-            <p>Emilio Nájera. 2020</p>
-        </footer>
-        <script>
+      
+        <!-- <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
                 // Use the window load event  to keep the page load performant
@@ -38,6 +126,6 @@
                     navigator.serviceWorker.register('/service-worker.js')
                 });
             }
-        </script>
+        </script> -->
     </body>
 </html>

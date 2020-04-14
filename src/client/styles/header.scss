@@ -5,10 +5,39 @@ $seriousColor: #26011C;
 $balanceColor: #BF9663;
 $clearColor: #F2F0F0;
 
-header {
+.header-container {
+    background-color: #F25F29;
+}
+
+.outer-box {
+    padding: 0.5em
+}
+
+.inner-box {
+    margin: 0 auto;
+    width: 85%;
+    max-width: 50em;
+}
+.flex-nav {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
-    background-color: $primaryColor;
-    color: $clearColor;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+}
+
+.flex-nav > .nav-list {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    list-style:  none;
+}
+
+.nav-list li {
+    margin: 1em;
+}
+
+.nav-list a {
+    font-size: 1em;
+    color: #ffffff;
+    text-decoration: none;
 }

@@ -4,10 +4,10 @@ $seriousColor: #26011C;
 $balanceColor: #BF9663;
 $clearColor: #F2F0F0;
 
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 10px 40px;
-    background-color: $primaryColor;
-    color: $clearColor;
+.footer {
+    text-align: center;
+    background-color:#BF4E24;
+    font-size: 1em;
+    font-weight: lighter;
+    color: #ffffff;
 }
