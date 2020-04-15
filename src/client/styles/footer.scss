@@ -1,13 +1,16 @@
-$primaryColor: #0D0D0D;
-$flushColor: #F20587;
-$seriousColor: #26011C;
-$balanceColor: #BF9663;
+$primaryColor: #49868C;
+$flushColor: #d9b166;
+$seriousColor: #A62D2D;
+$balanceColor: #A0D9D9;
 $clearColor: #F2F0F0;
 
 .footer {
     text-align: center;
-    background-color:#BF4E24;
+    background-color:$flushColor;
     font-size: 1em;
     font-weight: lighter;
     color: #ffffff;
+    p{
+        padding:2em;
+    }
 }

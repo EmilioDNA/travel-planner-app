@@ -2,11 +2,8 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 var path = require('path')
-const mockAPIResponse = require('./mockAPI.js')
 const aylien = require('aylien_textapi')
 
-//For testing
-const fetch = require('node-fetch')
 
 
 // set aylien API credentials

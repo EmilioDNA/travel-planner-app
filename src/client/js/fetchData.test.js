@@ -1,15 +1,21 @@
-const { fetchSentiment } = require('./fetchData');
+const { saveTrip } = require('./fetchData');
 const fetchMock = require('fetch-mock');
 import "@babel/polyfill";
 
 
 describe('fetch', () =>{
-
+    const data = {
+        days:'3', 
+        city: 'Paris', 
+        country: 'France', 
+        high: '30.5', 
+        low: '10.6', 
+        description: 'Cloudy',  
+        imgURL:'https://pixabay.com/get/57e0d74b4e52_640.jpg'
+    }
     it('can fetch', async () => {
-        const value = 'https://www.techspot.com/news/84674-app-spending-hits-record-levels-people-look-break.html'
-
-        fetchMock.post('http://localhost:8081/check', {value});
-        const result = await  fetchSentiment('http://localhost:8081/check', {value});
-        expect(result).toEqual({value});
+        fetchMock.post('http://localhost:8081/check', data);
+        const result = await  saveTrip('http://localhost:8081/check', data);
+        expect(result).toEqual(data);
     });
 });

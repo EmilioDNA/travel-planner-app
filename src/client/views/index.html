@@ -13,14 +13,8 @@
             <header class="box header-container">
                 <nav class="inner-box flex-nav">
                     <div>
-                        <h2>Blog</h2>
+                        <h2>My travel app</h2>
                     </div>
-                    <ul class="nav-list">
-                        <li><a href="#">Explore</a></li>
-                        <li><a href="#">Most Popular</a></li>
-                        <li><a href="#">Reviews</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
                     <ul class="nav-list">
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fab fa-facebook"></i></a></li>
@@ -30,38 +24,15 @@
                     </nav>
             </header>
             <section class="box outer-box">
-                <main>
-                    <section>
-                        <form class="">
-                            <input id="name" type="text" name="input" value="" placeholder="example: Paris">
-                            <input type="date" id="date" name="trip-start">
-
-                            <input class="button" type="submit" name="" value="Search city" onclick="Client.handleSubmit(event)">
-                        </form>
-                    <section>
-        
+                    <form class="search-box">
+                        <input id="name" type="text" name="input" value="" placeholder="example: Paris">
+                        <input type="date" id="date" name="trip-start">
+                        <input class="button" type="submit" name="" value="Search city" onclick="Client.handleSubmit(event)">
+                    </form>
                     <section class="form-results">
                         <strong><h1>Form Results:</h1></strong>
-                        <div id="results"></div>
                     </section>
-                </main>
                 <div id="travel-planner-list" class="inner-box blog-post-list"> 
-                    <div class="card">
-                        <figure>
-                            <img id="travel-img" src="/src/client/media/blog-content.jpg" alt="Article about UX and Coronavirus">
-                            <!-- <figcaption class="article-info"><em>Article No. 345 | April 01, 2020</em></figcaption> -->
-                        </figure>
-                        <div class="card-body">
-                            <h2><span id="city">Paris</span>, <span id="country">France</span> is <span id="days">220</span> days away</h2>
-                            <span>
-                                <button class="card-button">Save trip</button>
-                                <button class="card-button">Remove trip</button>
-                            </span>
-                            <p>Typical weather for then is:</p>
-                            <span>High - <span id="high">46</span> | Low - <span id="low">35<span></span> 
-                            <p id="description">Mostly cloudy throughout the day.</p>
-                        </div>
-                    </div>
                 </div>
             </section>
             <footer class="box footer">
@@ -69,7 +40,7 @@
             </footer>
         </div>
        
-        <!-- <script>
+        <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
                 // Use the window load event  to keep the page load performant
@@ -77,6 +48,6 @@
                     navigator.serviceWorker.register('/service-worker.js')
                 });
             }
-        </script> -->
+        </script>
     </body>
 </html>

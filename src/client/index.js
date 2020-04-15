@@ -4,9 +4,10 @@ import { getGeoNamesCity, getWeatherCondition, getImage, saveTrip } from './js/f
 import { handleSubmit, handleClick } from './js/formHandler'
 
 import './styles/resets.scss'
+import './styles/header.scss'
 import './styles/base.scss'
 import './styles/footer.scss'
-import './styles/header.scss'
+
 
 export {
     formatToDate,
@@ -19,5 +20,5 @@ export {
     getImage,
     saveTrip,
     handleSubmit,
-    handleClick
+    handleClick,
 }

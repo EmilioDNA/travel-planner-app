@@ -42,14 +42,15 @@ function handleSubmit(event) {
                                 const obj = {
                                     high_temp: data.data[daysDifference].high_temp,
                                     low_temp: data.data[daysDifference].low_temp,
-                                    description: data.data[daysDifference].weather.description
+                                    description: data.data[daysDifference].weather.description,
+                                    icon: data.data[daysDifference].weather.icon
                                 }
                                 return obj 
                             }).then((obj) => {
                                 Client.getImage(baseURLPixabay, city, type, orientation, category, keyPixabay)
                                 .then((data) => {
                                     const imgURL = data.hits[counter].webformatURL
-                                    Client.createTravelCard(daysDifference, geoname.name, geoname.countryName, obj.high_temp, obj.low_temp, obj.description, imgURL);
+                                    Client.createTravelCard(daysDifference, geoname.name, geoname.countryName, obj.high_temp, obj.low_temp, obj.description, obj.icon, imgURL);
                                     counter += 1;
                                 }) 
                             })  

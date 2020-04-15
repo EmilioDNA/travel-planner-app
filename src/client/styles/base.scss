@@ -1,8 +1,9 @@
-$primaryColor: #0D0D0D;
-$flushColor: #F20587;
-$seriousColor: #26011C;
-$balanceColor: #BF9663;
+$primaryColor: #49868C;
+$flushColor: #d9b166;
+$seriousColor: #A62D2D;
+$balanceColor: #A0D9D9;
 $clearColor: #F2F0F0;
+
 
 
 
@@ -25,6 +26,23 @@ a:hover {
     grid-gap: 0.25em;
 }
 
+.form-results {
+    margin: 3em;
+    text-align: center;
+
+    h1, button {
+        font-size: 1.5em;
+        margin: 0.5em;
+    }
+
+    button {
+        background-color: $flushColor;
+        border: 1px solid gray;
+        padding: 0.25em 1em;
+        height: 45px;
+        color: white;
+    }
+}
 
 .blog-post-list {
     display: grid;
@@ -34,8 +52,8 @@ a:hover {
 .card {
     margin: 0.5em;
     padding: 0.75em;
-    border-bottom: 0.5em solid #F2BC1B;
-    background-color: $balanceColor;
+    border-bottom: 0.5em solid $primaryColor;
+    background-color: $clearColor;
 
     figure {
         margin: 0;
@@ -45,14 +63,20 @@ a:hover {
         width: 100%;
         max-height: 300px;
     }
+
+    img.img-icon {
+        width: 2.5em;
+    }
 }
 
-
+.card figure {
+    padding: 0.5em;
+}
 .card figcaption, .card-body {
     padding: 0.5em;
 }
 
-.card-body h2 {
+.card-body > h2 {
     font-size: 1.25em;
     font-weight: normal;
     color: $seriousColor;
@@ -71,6 +95,11 @@ a:hover {
     background-color:  $clearColor;
     padding: 0.5em 0.5em;
     color: $primaryColor;
+}
+
+.weather-description {
+    display: flex;
+    align-items: center;
 }
 
 /* Small devices (landscape phones, 576px and up) */
