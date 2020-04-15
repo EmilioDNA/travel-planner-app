@@ -47,28 +47,27 @@ const getImage = async (url, q, type, orientation, category, key ) => {
     }
 }
 
-// const updateUI = async () => {
-//     const request = await fetch('/all');
-//     try {
-//         const allData = await request.json();
-//         document.getElementById('date').innerHTML = `Date: ${allData.date}`;
-//         document.getElementById('temp').innerHTML = `Temperature: ${allData.temperature}`;
-//         document.getElementById('content').innerHTML = `Feeling: ${allData.feelings}`; 
-//     } catch(error) {
-//         console.log("error", error);
-//     }
-// }
 
-const updateCitiesUI = async (data) => {
-    
+const saveTrip = async (url = '', data = {}) => {
+    const response = await fetch(url, {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+
     try {
-
+        const newData = await response.json();
+        console.log(newData);
+        return newData;
     } catch(error) {
         console.log("error", error);
     }
 }
 
-export {getGeoNamesCity, getWeatherCondition, getImage, updateCitiesUI}
+export {getGeoNamesCity, getWeatherCondition, getImage, saveTrip}
 
 // // Helper methods
 // const handleClick = (e) => {

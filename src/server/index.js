@@ -50,6 +50,10 @@ app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
 
+const tripsData = []
+
+
+
 app.get('/test', function (req, res) {
     textapi.sentiment({
         'text': 'John Wick'
@@ -63,16 +67,13 @@ app.get('/test', function (req, res) {
     });
 })
 
-app.post('/check', (req, res) => {
+app.get('/all', (request, response) => {
+    response.send(tripsData);
+});
+
+app.post('/save-trip', (req, res) => {
     let data = req.body;
-    textapi.sentiment({
-        'url': data.formText
-    }, function(error, response){
-        if (error === null) {
-            console.log(response);
-            res.send(response);
-        } else {
-            console.log(error);
-        }
-    });
+    console.log(data);
+    tripsData.push(data);
+    res.send(data)
 })

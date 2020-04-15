@@ -34,6 +34,8 @@
                     <section>
                         <form class="">
                             <input id="name" type="text" name="input" value="" placeholder="example: Paris">
+                            <input type="date" id="date" name="trip-start">
+
                             <input class="button" type="submit" name="" value="Search city" onclick="Client.handleSubmit(event)">
                         </form>
                     <section>
@@ -43,69 +45,21 @@
                         <div id="results"></div>
                     </section>
                 </main>
-                <div id="travel-planner-list" class="inner-box blog-post-list">
+                <div id="travel-planner-list" class="inner-box blog-post-list"> 
                     <div class="card">
                         <figure>
-                            <img src="/src/client/media/blog-content.jpg" alt="Article about UX and Coronavirus">
+                            <img id="travel-img" src="/src/client/media/blog-content.jpg" alt="Article about UX and Coronavirus">
                             <!-- <figcaption class="article-info"><em>Article No. 345 | April 01, 2020</em></figcaption> -->
                         </figure>
                         <div class="card-body">
-                            <h2>Paris, France is 220 days away</h2>
+                            <h2><span id="city">Paris</span>, <span id="country">France</span> is <span id="days">220</span> days away</h2>
                             <span>
                                 <button class="card-button">Save trip</button>
                                 <button class="card-button">Remove trip</button>
                             </span>
                             <p>Typical weather for then is:</p>
-                            <span>High - 46 | Low - 35</span> 
-                            <p>Mostly cloudy throughout the day.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <figure>
-                            <img src="/src/client/media/blog-content.jpg" alt="Article about UX and Coronavirus">
-                            <figcaption class="article-info"><em>Article No. 345 | April 01, 2020</em></figcaption>
-                        </figure>
-                        <div class="card-body">
-                            <h2>Paris, France is 220 days away</h2>
-                            <span>
-                                <button class="card-button">Save trip</button>
-                                <button class="card-button">Remove trip</button>
-                            </span>
-                            <p>Typical weather for then is:</p>
-                            <span>High - 46 | Low - 35</span> 
-                            <p>Mostly cloudy throughout the day.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <figure>
-                            <img src="/src/client/media/blog-content.jpg" alt="Article about UX and Coronavirus">
-                            <figcaption class="article-info"><em>Article No. 345 | April 01, 2020</em></figcaption>
-                        </figure>
-                        <div class="card-body">
-                            <h2>Paris, France is 220 days away</h2>
-                            <span>
-                                <button class="card-button">Save trip</button>
-                                <button class="card-button">Remove trip</button>
-                            </span>
-                            <p>Typical weather for then is:</p>
-                            <span>High - 46 | Low - 35</span> 
-                            <p>Mostly cloudy throughout the day.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <figure>
-                            <img src="/src/client/media/blog-content.jpg" alt="Article about UX and Coronavirus">
-                            <figcaption class="article-info"><em>Article No. 345 | April 01, 2020</em></figcaption>
-                        </figure>
-                        <div class="card-body">
-                            <h2>Paris, France is 220 days away</h2>
-                            <span>
-                                <button class="card-button">Save trip</button>
-                                <button class="card-button">Remove trip</button>
-                            </span>
-                            <p>Typical weather for then is:</p>
-                            <span>High - 46 | Low - 35</span> 
-                            <p>Mostly cloudy throughout the day.</p>
+                            <span>High - <span id="high">46</span> | Low - <span id="low">35<span></span> 
+                            <p id="description">Mostly cloudy throughout the day.</p>
                         </div>
                     </div>
                 </div>
@@ -114,10 +68,7 @@
                 <div><p><em>Copyright</em>  <strong>Emilio Nájera</strong> 2020</p></div>
             </footer>
         </div>
-        <!-- 
-        
-
-      
+       
         <!-- <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {

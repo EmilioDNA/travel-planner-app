@@ -1,7 +1,7 @@
-import { isValidURL } from './js/urlChecker'
-import { createTravelCard} from './js/updateUI'
-import { getGeoNamesCity, getWeatherCondition, getImage } from './js/fetchData'
-import { handleSubmit } from './js/formHandler'
+import { getTravelDaysLeft, formatToDate, replaceSpaces } from './js/utils'
+import { createTravelCard, cleanResults} from './js/updateUI'
+import { getGeoNamesCity, getWeatherCondition, getImage, saveTrip } from './js/fetchData'
+import { handleSubmit, handleClick } from './js/formHandler'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -9,10 +9,15 @@ import './styles/footer.scss'
 import './styles/header.scss'
 
 export {
-    isValidURL,
+    formatToDate,
+    getTravelDaysLeft,
+    replaceSpaces,
     createTravelCard,
+    cleanResults,
     getGeoNamesCity,
     getWeatherCondition,
     getImage,
-    handleSubmit
+    saveTrip,
+    handleSubmit,
+    handleClick
 }
