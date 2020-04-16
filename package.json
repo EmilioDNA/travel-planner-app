@@ -21,6 +21,7 @@
     "express": "^4.17.1",
     "html2canvas": "^1.0.0-rc.5",
     "jspdf": "^1.5.3",
+    "source-map": "^0.7.3",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
   },

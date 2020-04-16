@@ -9,6 +9,10 @@ const WorkboxPlugin = require('workbox-webpack-plugin')
 module.exports = {
     entry: './src/client/index.js',
     mode: 'production',
+    output: {
+        libraryTarget: 'var',
+        library: 'Client'
+    },
     optimization: {
         minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})]
     },
@@ -25,7 +29,11 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: ['file-loader']
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'media/',
+                    name: '[name].[ext]'
+                }
             }
         ]
     },

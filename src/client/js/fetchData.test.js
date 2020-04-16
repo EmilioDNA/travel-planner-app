@@ -2,7 +2,7 @@ const { saveTrip } = require('./fetchData');
 const fetchMock = require('fetch-mock');
 import "@babel/polyfill";
 
-
+// Test that the fetch query is performed correctly.
 describe('fetch', () =>{
     const data = {
         days:'3', 

@@ -19,6 +19,6 @@ export {
     getWeatherCondition,
     getImage,
     saveTrip,
-    handleSubmit,
     handleClick,
+    handleSubmit
 }

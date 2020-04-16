@@ -3,7 +3,7 @@ import "@babel/polyfill";
 
 
 
-
+// Test that the data is cleaned correctly
 test('test that "The data is cleaned', async () => {
      // Set up our document body
     document.body.innerHTML =
@@ -18,7 +18,7 @@ test('test that "The data is cleaned', async () => {
 });
 
 
-
+// Test that the data is added correctly
 test('test that "The data is filled', async () => {
     document.body.innerHTML =
     '<div id="travel-planner-list"></div>';
